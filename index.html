@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Do You Want a Surprise?</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Background video -->
+  <video id="bg-video" autoplay muted loop playsinline>
+    <source src="match-cut.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Background music -->
+  <audio id="bg-music" loop>
+    <source src="song.mp3" type="audio/mpeg" />
+    Your browser does not support the audio element.
+  </audio>
+
+  <!-- Start Screen -->
+  <div id="start-screen" class="centered">
+    <div class="bubble">
+      <button onclick="startApp()">Click to Start</button>
+    </div>
+  </div>
+
+  <!-- Question Screen -->
+  <div id="question-screen" class="centered hidden">
+    <div class="bubble">Do you wanna see a surprise?</div>
+    <div class="button-row">
+      <button onclick="showSurprise()">Yes</button>
+      <button onclick="showNoMessage()">No</button>
+    </div>
+    <div id="no-message" class="bubble hidden"></div>
+  </div>
+
+  <!-- Surprise Screen -->
+  <div id="surprise-screen" class="centered hidden">
+    <img src="https://media.tenor.com/YTw87WdiaasAAAAi/tkthao219-capoo.gif" alt="Excited Capoo GIF" />
+    <button id="clickMeBtn" class="bubble" onclick="showBirthdayMessage()">
+      ❤️I'm too shy to actually hug you sooo ima just digital hug you ❤️ ok now click me !!!
+    </button>
+    <p class="bubble hidden" id="birthday-message">
+      Happy 20th Birthday! 🥳 Finally, you’re 20 just like me! Wishing you a day filled with love, laughter, and endless joy. You deserve all the happiness in the world as you step into this amazing new chapter! ❤️🎂
+    </p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
